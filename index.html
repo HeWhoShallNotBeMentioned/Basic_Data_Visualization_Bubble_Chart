@@ -33,6 +33,22 @@
     { north: 32.9, west: 88.9, wind:  65 },
     { north: 34.7, west: 88.4, wind:  50 },
     ];
+
+    var get_points = function(source_array, filter_function) {
+    var result = [];
+    for (var i=0; i<source_array.length; i++) {
+        if ( (typeof filter_function === "undefined")
+          || (typeof filter_function !== "function")
+          || filter_function(source_array[i]) ) {
+            result.push([
+                source_array[i].west * -1,
+                source_array[i].north,
+                source_array[i].wind,
+            ]);
+        }
+    }
+      return result;
+    };
         Flotr.draw(document.getElementById("chart"), data, {
 
         }
