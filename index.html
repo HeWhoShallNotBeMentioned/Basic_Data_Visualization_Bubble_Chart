@@ -2,9 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Hurricane Katrina 2005: Course and Wind Strength</title>
+    <style>
+        .flotr-legend {
+            padding: 5px;
+            background-color: #ececec;
+        }
+    </style>
   </head>
   <body>
+    <p><strong>Hurricane Katrina 2005: Course and Wind Strength</strong></p>
     <div id="chart" style="width:800px;height:400px;"></div>
     <script type="text/javascript" src="js/flotr2.js"> </script>
     <script>
@@ -114,7 +121,8 @@
               verticalLines: false
             },
             yaxis: {showLabels: false, min: 23.607, max: 33.657},
-            xaxis: {showLabels: false, min: -94.298, max: -77.586}
+            xaxis: {showLabels: false, min: -94.298, max: -77.586},
+            legend: {position: "sw", backgroundOpacity: 0,}
           }
       );
     };
