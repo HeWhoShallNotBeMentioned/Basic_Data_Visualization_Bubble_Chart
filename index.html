@@ -9,7 +9,7 @@
     <script type="text/javascript" src="js/flotr2.js"> </script>
     <script>
 
-      window.onload = function () {
+    window.onload = function () {
 
         var katrina = [
     { north: 23.2, west: 75.5, wind:  35 },
@@ -49,11 +49,13 @@
     }
       return result;
     };
-        Flotr.draw(document.getElementById("chart"), data, {
-
-        }
-      };
-
+        Flotr.draw(document.getElementById("chart"),
+        [{
+          data: get_points(katrina),
+          bubbles: {show: true, baseRadius: 0.3}
+        }]
+      );
+    };
     </script>
   </body>
 </html>
